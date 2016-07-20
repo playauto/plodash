@@ -2,24 +2,17 @@
   "name": "ptg-lodash",
   "version": "1.0.0",
   "description": "playauto Lodash Addons",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/playauto/plodash.git"
-  },
   "author": "tienne",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/playauto/plodash/issues"
-  },
-  "homepage": "https://github.com/playauto/plodash#readme",
   "peerDependencies": {
     "lodash": "^4.13.1"
   },
   "devDependencies": {
     "gulp": "^3.9.0"
-  }
+  },
+  "dependencies": {}
 }
