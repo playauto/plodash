@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/playauto/plodash/issues"
   },
-  "homepage": "https://github.com/playauto/plodash#readme"
+  "homepage": "https://github.com/playauto/plodash#readme",
+  "peerDependencies": {
+    "lodash": "^4.13.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
 }
