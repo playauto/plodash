@@ -1,4 +1,8 @@
-/**
- *
- *  2016-07-20 권윤학
- */
+// Gulp
+var gulp = require('gulp');
+
+var jsPaths = [
+  'src/**/*.js',
+  'test/**/*',
+  '*.js'
+];

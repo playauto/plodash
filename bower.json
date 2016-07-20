@@ -1,7 +1,7 @@
 {
   "name": "ptg-lodash",
   "description": "playauto Lodash Addons",
-  "main": "index.js",
+  "main": "dist/ptg-lodash.min.js",
   "authors": [
     "tienne"
   ],
