@@ -1,0 +1,17 @@
+{
+  "name": "ptg-lodash",
+  "description": "playauto Lodash Addons",
+  "main": "index.js",
+  "authors": [
+    "tienne"
+  ],
+  "license": "playauto",
+  "homepage": "https://github.com/playauto/plodash",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
