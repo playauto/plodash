@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "playauto Lodash Addons",
   "private": true,
-  "main": "dist/ptg-lodash.min.js",
+  "main": "dist/ptg-lodash.js",
   "license": "playauto",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
