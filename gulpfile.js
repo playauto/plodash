@@ -1,6 +1,6 @@
 'use strict';
 
-// Gulp
+// Gulp test
 var gulp = require('gulp');
 
 // Plugins
