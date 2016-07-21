@@ -57,7 +57,7 @@
    * @returns {*|boolean} "" 이면 true 아니면 flase
    */
   function isEmptyStr(str) {
-    return _.isString(str) && string.trim() === '';
+    return _.isString(str) && str.trim() === '';
   }
 
   _.mixin({
