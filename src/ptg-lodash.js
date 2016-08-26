@@ -65,11 +65,7 @@
   ptgLodash.combinations = combinations;
   ptgLodash.isEmptyStr = isEmptyStr;
 
-  _.mixin(ptgLodash, _);
-  //_.mixin({
-  //  deepDiff: deepDiff,
-  //  combinations: combinations,
-  //  isEmptyStr: isEmptyStr
-  //});
-  return ptgLodash;
+  _.mixin(_, ptgLodash);
+
+  return _;
 }));
