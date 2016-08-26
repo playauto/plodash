@@ -54,17 +54,22 @@
   /**
    * 빈 문자열인지 체크해주는 함수
    * @param str 체크할 문자열
-   * @returns {*|boolean} "" 이면 true 아니면 flase
+   * @returns {*|boolean} "" 이면 true 아니면 false
    */
   function isEmptyStr(str) {
     return _.isString(str) && str.trim() === '';
   }
+  var ptgLodash = function() {};
 
-  _.mixin({
-    deepDiff: deepDiff,
-    combinations: combinations,
-    isEmptyStr: isEmptyStr
-  });
+  ptgLodash.deepDiff = deepDiff;
+  ptgLodash.combinations = combinations;
+  ptgLodash.isEmptyStr = isEmptyStr;
 
-  return _;
+  _.mixin(ptgLodash, _);
+  //_.mixin({
+  //  deepDiff: deepDiff,
+  //  combinations: combinations,
+  //  isEmptyStr: isEmptyStr
+  //});
+  return ptgLodash;
 }));
