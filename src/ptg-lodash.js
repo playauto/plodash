@@ -61,9 +61,9 @@
   }
   var ptgLodash = function() {};
 
-  ptgLodash.deepDiff = deepDiff;
-  ptgLodash.combinations = combinations;
-  ptgLodash.isEmptyStr = isEmptyStr;
+  ptgLodash.prototype.deepDiff = deepDiff;
+  ptgLodash.prototype.combinations = combinations;
+  ptgLodash.prototype.isEmptyStr = isEmptyStr;
 
   _.mixin(ptgLodash);
 
