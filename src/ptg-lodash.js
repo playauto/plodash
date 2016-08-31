@@ -59,11 +59,22 @@
   function isEmptyStr(str) {
     return _.isString(str) && str.trim() === '';
   }
+
+  /**
+   * null or undefined 체크 함수
+   * @param value
+   * @returns {boolean} null도 아니고 undefined도 아니면 true
+   */
+  function isExists(value) {
+    return !_.isUndefined(value) && !_.isNull(value);
+  }
+
   var ptgLodash = function() {};
 
   ptgLodash.deepDiff = deepDiff;
   ptgLodash.combinations = combinations;
   ptgLodash.isEmptyStr = isEmptyStr;
+  ptgLodash.isExists = isExists;
 
   _.mixin(ptgLodash);
 
