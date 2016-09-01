@@ -69,12 +69,22 @@
     return !_.isUndefined(value) && !_.isNull(value);
   }
 
+  /**
+   * null or undefined or empty 문자열 확인
+   * @param value
+   * @returns {boolean} null or undefined or empty 이면 true
+   */
+  function isNullOrEmpty(value) {
+    return isEmptyStr(value) || !isExists(value);
+  }
+
   var ptgLodash = function() {};
 
   ptgLodash.deepDiff = deepDiff;
   ptgLodash.combinations = combinations;
   ptgLodash.isEmptyStr = isEmptyStr;
   ptgLodash.isExists = isExists;
+  ptgLodash.isNullOrEmpty = isNullOrEmpty;
 
   _.mixin(ptgLodash);
 

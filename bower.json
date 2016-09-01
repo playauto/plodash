@@ -1,6 +1,6 @@
 {
   "name": "ptg-lodash",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "playauto Lodash Addons",
   "main": "dist/ptg-lodash.min.js",
   "authors": [
