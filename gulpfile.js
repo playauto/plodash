@@ -2,16 +2,25 @@
 
 // Gulp test
 var gulp = require('gulp');
-
+require('gulp-release-tasks')(gulp);
 // Plugins
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
+var mocha = require('gulp-mocha');
 
 var jsPaths = [
   'src/**/*.js',
   'test/**/*',
   '*.js'
 ];
+
+gulp.task('test', function(){
+  gulp.src('test/tests.spec.js')
+    .pipe(mocha())
+    .once('error', function(){
+      process.exit(1);
+    });
+});
 
 gulp.task('copy', function() {
   return gulp.src('src/ptg-lodash.js')
@@ -25,4 +34,4 @@ gulp.task('compress', function() {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('deploy', ['copy', 'compress']);
+gulp.task('deploy', ['test', 'copy', 'compress']);
