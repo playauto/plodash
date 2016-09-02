@@ -88,5 +88,12 @@
 
   _.mixin(ptgLodash);
 
+
+  if (typeof exports !== 'undefined') {
+    if( typeof module !== 'undefined' && module.exports ) {
+      exports = module.exports = _;
+    }
+    exports._ = _;
+  }
   return _;
 }));

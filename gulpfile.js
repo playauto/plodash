@@ -17,7 +17,8 @@ var jsPaths = [
 gulp.task('test', function(){
   gulp.src('test/tests.spec.js')
     .pipe(mocha())
-    .once('error', function(){
+    .once('error', function(e){
+      console.log(e);
       process.exit(1);
     });
 });
@@ -34,4 +35,4 @@ gulp.task('compress', function() {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('deploy', ['test', 'copy', 'compress']);
+gulp.task('deploy', ['test', 'copy', 'compress', 'tag']);
