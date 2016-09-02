@@ -78,22 +78,15 @@
     return isEmptyStr(value) || !isExists(value);
   }
 
-  var ptgLodash = function() {};
-
-  ptgLodash.deepDiff = deepDiff;
-  ptgLodash.combinations = combinations;
-  ptgLodash.isEmptyStr = isEmptyStr;
-  ptgLodash.isExists = isExists;
-  ptgLodash.isNullOrEmpty = isNullOrEmpty;
+  var ptgLodash = {
+    deepDiff : deepDiff,
+    combinations : combinations,
+    isEmptyStr : isEmptyStr,
+    isExists : isExists,
+    isNullOrEmpty : isNullOrEmpty
+  };
 
   _.mixin(ptgLodash);
 
-
-  if (typeof exports !== 'undefined') {
-    if( typeof module !== 'undefined' && module.exports ) {
-      exports = module.exports = _;
-    }
-    exports._ = _;
-  }
   return _;
 }));
