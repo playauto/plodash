@@ -6,7 +6,10 @@
   "main": "dist/ptg-lodash.min.js",
   "license": "playauto",
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha test",
+    "deploy_patch": "gulp deploy",
+    "deploy_minor": "gulp deploy --minor",
+    "deploy_major": "gulp deploy --major"
   },
   "repository": {
     "type": "git",
