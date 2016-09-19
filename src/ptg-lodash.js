@@ -57,7 +57,7 @@
    * @returns {*|boolean} "" 이면 true 아니면 false
    */
   function isEmptyStr(str) {
-    return _.isString(str) && str.trim() === '';
+    return _.isString(str) && _.trim(str) === '';
   }
 
   /**
@@ -78,12 +78,44 @@
     return isEmptyStr(value) || !isExists(value);
   }
 
+  /**
+   * true인지 false인지 확인해주는 라이브러리 ("true" / 1 / true[boolean])
+   * @param str 확인할 값
+   * @param trueValues true로 취급될 값들(추가적으로)
+   * @returns {boolean} true/false (boolean)
+   */
+  function isBoolean(str, trueValues) {
+
+    var boolMatch = function(s, matchers) {
+      var i, matcher, down = s.toLowerCase();
+      matchers = [].concat(matchers);
+      for (i = 0; i < matchers.length; i += 1) {
+        matcher = matchers[i];
+        if (!matcher) continue;
+        if (matcher.test && matcher.test(s)) return true;
+        if (matcher.toLowerCase() === down) return true;
+      }
+    }
+
+    if (typeof str === 'number') str = '' + str;
+    if (typeof str !== 'string') return !!str;
+
+    str = _.trim(str);
+
+    if (boolMatch(str, trueValues || ['true', '1'])) {
+      return true;
+    } else{
+      return false;
+    }
+  }
+
   var ptgLodash = {
     deepDiff : deepDiff,
     combinations : combinations,
     isEmptyStr : isEmptyStr,
     isExists : isExists,
-    isNullOrEmpty : isNullOrEmpty
+    isNullOrEmpty : isNullOrEmpty,
+    isBoolean : isBoolean
   };
 
   _.mixin(ptgLodash);
