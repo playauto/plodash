@@ -150,3 +150,12 @@ var flag = _.toBoolean(0);
 var flag = _.toBoolean("test");
 // => false
 ```
+
+# test 로직 #
+
+test는 [mocha](https://github.com/mochajs/mocha)를 사용하고 있습니다.
+
+# 배포 및 라이브러리 관리 #
+
+빌드 및 배포 라이브러리 관리 등은 [gulp](https://github.com/gulpjs/gulp)를 이용하여 진행하고있으며
+배포는 실제적으로 npm script를 이용하여 진행하고있습니다.(자세한 내용은 package.json 및 gulpfile.js 참고)
