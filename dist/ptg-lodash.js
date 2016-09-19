@@ -84,7 +84,7 @@
    * @param trueValues true로 취급될 값들(추가적으로)
    * @returns {boolean} true/false (boolean)
    */
-  function isBoolean(str, trueValues) {
+  function toBoolean(str, trueValues) {
 
     var boolMatch = function(s, matchers) {
       var i, matcher, down = s.toLowerCase();
@@ -115,7 +115,7 @@
     isEmptyStr : isEmptyStr,
     isExists : isExists,
     isNullOrEmpty : isNullOrEmpty,
-    isBoolean : isBoolean
+    toBoolean : toBoolean
   };
 
   _.mixin(ptgLodash);
