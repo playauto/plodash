@@ -46,7 +46,6 @@ lodash.js 다음으로 불러와서 사용하면 됩니다.
 
 - [deepDiff](#deepdiff) object를 비교하여 다른 항목들만 뽑는 처리
 - [isEmptyStr](#isemptystr) 빈 문자열인지 체크해주는 함수
-- [isExists](#isexists) null or undefined 체크 함수
 - [isNullOrEmpty](#isnullorempty) null or undefined or empty 문자열 확인
 - [toBoolean](#toboolean) true인지 false인지 확인해주는 라이브러리 ("true" / 1 / true[boolean])
 
@@ -77,31 +76,10 @@ or
 var str = _.isEmptyStr(str) ? "기본값" : str;
 ```
 
-# isExists #
-#### _.isExists(value) ####
-
-isExists 은 정상적인 값으로 존재하는지 확인하는 함수입니다(null or undefined가 아닌지)
-
-#### Arguments ####
-value(Value): 검사할 값(형 제한 없음)
-
-#### Returns ####
-(Boolean): null도 아니고 undefined도 아니면 true
-
-#### Example ####
-
-```
-//obj.val 값이 존재한다면
-if(_.isExists(obj.val)) {
-  //해당 조건으로 들어온다
-}
-```
-
-
 # isNullOrEmpty #
 #### _.isNullOrEmpty(value) ####
 
-isNullOrEmpty 은 isExists와 isEmptyStr를 합친 함수로
+isNullOrEmpty 은 isNil와 isEmptyStr를 합친 함수로
 정상적으로 존재하는 값이면서 빈문자열이 아닌 경우를 체크하기 위한 함수입니다.
 
 #### Arguments ####
