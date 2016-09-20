@@ -61,21 +61,12 @@
   }
 
   /**
-   * null or undefined 체크 함수
-   * @param value
-   * @returns {boolean} null도 아니고 undefined도 아니면 true
-   */
-  function isExists(value) {
-    return !_.isUndefined(value) && !_.isNull(value);
-  }
-
-  /**
    * null or undefined or empty 문자열 확인
    * @param value
    * @returns {boolean} null or undefined or empty 이면 true
    */
   function isNullOrEmpty(value) {
-    return isEmptyStr(value) || !isExists(value);
+    return _.isNil(value) || isEmptyStr(value);
   }
 
   /**
@@ -113,7 +104,6 @@
     deepDiff : deepDiff,
     combinations : combinations,
     isEmptyStr : isEmptyStr,
-    isExists : isExists,
     isNullOrEmpty : isNullOrEmpty,
     toBoolean : toBoolean
   };
